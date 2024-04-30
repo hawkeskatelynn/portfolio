@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fostering Saves Lives 😸</title>
+    <style>
+      h1 {
+        text-align: center;
+        text-shadow: 5px 5px 10px rgba(124, 115, 230, 0.24);
+        color: #5c5470;
+      }
+
+      h2 {
+        text-align: center;
+        color: #352f44;
+      }
+
+      img {
+        border-radius: 18px;
+        margin: 0 auto;
+        display: block;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+        max-width: 95%;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      span {
+        font-weight: bolder;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      button {
+        margin: 0 auto;
+        display: block;
+        border-radius: 20px;
+        transition: all 200ms ease-in-out;
+        padding: 20px 40px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+        background: #5c5470;
+        color: #dbd8e3;
+        border: none;
+        text-shadow: 5px 5px 10px rgba(124, 115, 230, 0.24);
+        font-size: 14px;
+      }
+
+      button:hover {
+        background: #dbd8e3;
+        color: #5c5470;
+        text-shadow: 5px 5px 10px rgba(124, 115, 230, 0.24);
+        cursor: pointer;
+      }
+
+      .tnr {
+        line-height: 1.5;
+      }
+
+      .rescueLinks {
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 20px;
+      }
+
+      .linkHere {
+        text-decoration: none;
+      }
+
+      .linkHere:hover {
+        text-decoration: underline;
+        color: #dbd8e3;
+      }
+
+      .page {
+        margin: 0 auto;
+        display: block;
+        padding: 20px 40px;
+        max-width: 90%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #2a2438;
+        background: linear-gradient(
+          to top,
+          #dad4ec 0%,
+          #dad4ec 1%,
+          #f3e7e9 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Fostering Saves Lives</h1>
+      <h2>Learn how to help your community and the feline population.</h2>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/037/011/original/shelter-intake_more-info_tab-image.jpeg?1655076578"
+        alt="Shelter kittens"
+      />
+      <br />
+      <hr />
+      <p>
+        Every year in the United States, approximately 530,000 cats are
+        euthanized in shelters. One way we can help to decrease this number is
+        to open our homes and hearts and become fosters for local shelters and
+        rescues.
+      </p>
+      <div>
+        <strong>
+          The most at-risk population in shelters are <em>kittens</em>.</strong
+        >
+      </div>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/037/010/original/kittens-outdoor-540356.jpeg?1655076459"
+        alt="Outdoor kittens"
+      />
+      <br />
+      <button>Find local shelters and rescues</button>
+      <br />
+      <hr />
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/037/009/original/ee5f1870e28217f8d7c5f53c489ac978.png?1655076395"
+        alt="Cat TNR"
+      />
+      <br />
+      <div class="tnr">
+        Another way you can help your local feline population is to reduce the
+        number of cats entering the shelters. A great way to do this is with TNR
+        (Trap Neuter Return). With this practice, you help your local stray
+        population by eliminating their ability to reproduce. This practice
+        alone, ends the cycle of cats reproducing into a life of suffering and
+        disease.
+      </div>
+      <br />
+      <hr />
+      <br />
+      <span>Ready to help?</span>
+      <br />
+      <br />
+      <div class="rescueLinks">
+        Find out more about fostering kittens
+        <a href="https://www.kittenlady.org" target="_blank" class="linkHere"
+          >here</a
+        >. Find out more about TNR
+        <a
+          href="https://www.alleycat.org/resources/why-trap-neuter-return-feral-cats-the-case-for-tnr/"
+          target="_blank"
+          class="linkHere"
+          >here</a
+        >.
+      </div>
+    </div>
+
+    <script>
+      function findLocal() {
+        let state = prompt("What state do you live in?");
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+
+        alert(
+          `Thank you, ${name}!  We will email you a list of local shelters and rescues in ${state}.`
+        );
+      }
+
+      let shelterButton = document.querySelector("button");
+      shelterButton.addEventListener("click", findLocal);
+
+      /*
+      function thankYou() {
+        let thanks = document.querySelector("h1");
+        thanks.innerHTML =
+          "Thank you for your interest in saving lives! <br /> Please click the below to get more information:";
+      }
+
+      function tnrLink() {
+        let alleyCat = document.querySelector("h2");
+        alleyCat.innerHTML += (
+          <a
+            href="https://www.alleycat.org/resources/why-trap-neuter-return-feral-cats-the-case-for-tnr/"
+            target="_blank"
+          >
+            More information about TNR.
+          </a>
+        );
+      }
+
+      function kittenLink() {
+        let kittenLady = document.querySelector("h2");
+        kittenLady.innerHTML += (
+          <a href="https://www.kittenlady.org" target="_blank">
+            More information about fostering kittens.
+          </a>
+        );
+      }
+
+      function jointLink() {
+        let bothLinks = document.querySelector("h2");
+        bothLinks.innerHTML = (
+          <a
+            href="https://www.alleycat.org/resources/why-trap-neuter-return-feral-cats-the-case-for-tnr/"
+            target="_blank"
+          >
+            More information about TNR and
+          </a>
+        );
+        <a href="https://www.kittenlady.org" target="_blank">
+          more information about fostering kittens.
+        </a>;
+      }
+
+      function readyHelp() {
+        let tnrInterest = prompt(
+          "Are you interested in learning more about TNR?"
+        );
+        tnrInterest = tnrInterest.toLowerCase().trim();
+
+        let kittenInterest = prompt(
+          "Are you interested in learning more about fostering kittens?"
+        );
+        kittenInterest = kittenInterest.toLowerCase().trim();
+
+        if (tnrInterest === "yes" && kittenInterest === "yes") {
+          thankYou();
+          jointLink();
+        } else if (kittenInterest === "yes") {
+          thankYou();
+          kittenLink();
+        } else {
+          thankYou();
+          tnrLink();
+        }
+      }
+
+      let helpButton = document.querySelector(".help");
+      helpButton.addEventListener("click", readyHelp);
+      */
+    </script>
+  </body>
+</html>
